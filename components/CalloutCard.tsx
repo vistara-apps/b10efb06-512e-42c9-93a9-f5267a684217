@@ -1,13 +1,8 @@
 'use client';
 
-import { AlertTriangle, Info } from 'lucide-react';
-
-interface CalloutCardProps {
-  variant?: 'warning' | 'info';
-  title?: string;
-  children: React.ReactNode;
-  className?: string;
-}
+import { AlertTriangle, Info, CheckCircle, XCircle } from 'lucide-react';
+import { CalloutCardProps } from '@/lib/types';
+import { cn } from '@/lib/utils';
 
 export function CalloutCard({ 
   variant = 'info', 
@@ -15,19 +10,48 @@ export function CalloutCard({
   children, 
   className = '' 
 }: CalloutCardProps) {
-  const isWarning = variant === 'warning';
+  const getVariantStyles = () => {
+    switch (variant) {
+      case 'warning':
+        return {
+          containerClass: 'warning-glow border-warning border-opacity-50',
+          iconClass: 'text-warning',
+          titleClass: 'text-warning',
+          icon: AlertTriangle,
+        };
+      case 'error':
+        return {
+          containerClass: 'border-red-500 border-opacity-50 bg-red-500/5',
+          iconClass: 'text-red-400',
+          titleClass: 'text-red-400',
+          icon: XCircle,
+        };
+      case 'success':
+        return {
+          containerClass: 'border-accent border-opacity-50 bg-accent/5',
+          iconClass: 'text-accent',
+          titleClass: 'text-accent',
+          icon: CheckCircle,
+        };
+      default:
+        return {
+          containerClass: '',
+          iconClass: 'text-primary',
+          titleClass: 'text-primary',
+          icon: Info,
+        };
+    }
+  };
+
+  const { containerClass, iconClass, titleClass, icon: Icon } = getVariantStyles();
   
   return (
-    <div className={`glass-card p-6 ${isWarning ? 'warning-glow border-warning border-opacity-50' : ''} ${className}`}>
+    <div className={cn('glass-card p-6', containerClass, className)}>
       <div className="flex items-start gap-3">
-        {isWarning ? (
-          <AlertTriangle className="text-warning flex-shrink-0 mt-1" size={20} />
-        ) : (
-          <Info className="text-primary flex-shrink-0 mt-1" size={20} />
-        )}
-        <div>
+        <Icon className={cn(iconClass, 'flex-shrink-0 mt-1')} size={20} />
+        <div className="flex-1">
           {title && (
-            <h3 className={`font-semibold mb-2 ${isWarning ? 'text-warning' : 'text-primary'}`}>
+            <h3 className={cn('font-semibold mb-2', titleClass)}>
               {title}
             </h3>
           )}
