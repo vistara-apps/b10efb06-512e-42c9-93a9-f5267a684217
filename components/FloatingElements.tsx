@@ -1,13 +1,13 @@
 'use client';
 
-import { Cube, Sparkles, Star, Plus } from 'lucide-react';
+import { Box, Sparkles, Star, Plus } from 'lucide-react';
 
 export function FloatingElements() {
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden">
       {/* Top right cube */}
       <div className="absolute top-20 right-20 floating-element opacity-30">
-        <Cube size={40} className="text-purple-300" />
+        <Box size={40} className="text-purple-300" />
       </div>
       
       {/* Left side envelope */}
@@ -17,7 +17,7 @@ export function FloatingElements() {
       
       {/* Bottom right large cube */}
       <div className="absolute bottom-20 right-20 floating-element opacity-25" style={{ animationDelay: '4s' }}>
-        <Cube size={60} className="text-pink-300" />
+        <Box size={60} className="text-pink-300" />
       </div>
       
       {/* Various stars and sparkles */}

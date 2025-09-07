@@ -59,7 +59,7 @@ export function ShmooMintButton() {
         <div className="glass-card p-6 mb-4">
           <div className="text-4xl mb-4">🎉</div>
           <h3 className="text-xl font-semibold mb-2 text-accent">Shmoo Claimed!</h3>
-          <p className="text-text-muted">Your non-transferable Shmoo point has been minted to your wallet.</p>
+          <p className="text-gray-300">Your non-transferable Shmoo point has been minted to your wallet.</p>
         </div>
         <button
           onClick={() => setMintSuccess(false)}
@@ -89,7 +89,7 @@ export function ShmooMintButton() {
       </button>
       
       {!isConnected && (
-        <p className="text-sm text-text-muted mt-4">
+        <p className="text-sm text-gray-300 mt-4">
           Connect your wallet to claim your Shmoo point
         </p>
       )}
