@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "frame": {
+    "version": "1",
+    "name": "Shmoo Faucet",
+    "subtitle": "Built with Zara",
+    "description": "Shmoo Faucet is a Base Mini App built with Zara.",
+    "iconUrl": "https://0co.to/images/zara-2.png",
+    "homeUrl": "https://b10efb06512e42c993a9f5267a684217-xwe4.vercel.app",
+    "splashImageUrl": "https://b10efb06512e42c993a9f5267a684217-xwe4.vercel.app/splash.png",
+    "splashBackgroundColor": "#000000",
+    "heroImageUrl": "https://b10efb06512e42c993a9f5267a684217-xwe4.vercel.app/image.png",
+    "tagline": "Shmoo Faucet",
+    "screenshotUrls": [
+      "https://b10efb06512e42c993a9f5267a684217-xwe4.vercel.app/screenshot.png",
+      "https://b10efb06512e42c993a9f5267a684217-xwe4.vercel.app/screenshot.png"
+    ],
+    "primaryCategory": "social",
+    "tags": [
+      "base",
+      "miniapp",
+      "onchainkit"
+    ],
+    "webhookUrl": "https://b10efb06512e42c993a9f5267a684217-xwe4.vercel.app/api/webhook"
+  }
+}
