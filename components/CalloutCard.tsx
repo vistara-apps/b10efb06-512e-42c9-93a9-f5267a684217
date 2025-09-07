@@ -31,7 +31,7 @@ export function CalloutCard({
               {title}
             </h3>
           )}
-          <div className="text-sm text-text-primary leading-relaxed">
+          <div className="text-sm text-white leading-relaxed">
             {children}
           </div>
         </div>

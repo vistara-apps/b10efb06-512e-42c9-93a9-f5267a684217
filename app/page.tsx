@@ -27,7 +27,7 @@ export default function HomePage() {
           <div className="text-center space-y-6">
             <ShmooMintButton />
             
-            <div className="text-sm text-text-muted">
+            <div className="text-sm text-gray-300">
               <p>Lazy's Shmoo isn't an asset. So you can't a fiat that result</p>
               <p>and be fine for this app name.</p>
             </div>
